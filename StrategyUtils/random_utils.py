@@ -12,7 +12,7 @@ def random_draw_allocation(weightings, number=100):
     """ puts a soldier in a random field 100 times, according to the weightings """
     assert abs(sum(weightings) - 1.0) < 1e-6
     result = [0.0 for _ in weightings]
-    for _ in xrange(number):
+    for _ in range(number):
         result[weighted_draw(weightings)] += 1
 
     return result
@@ -55,7 +55,7 @@ def dirichlet_allocation(weightings, number=100):
 
 def get_allocation_uniform(num_fields, num_soldiers=100):
     """ gets an allocation uniformly from all possible allocations. According to some internet source..."""
-    dividers = sorted(random.sample(xrange(1, num_soldiers + num_fields), num_fields - 1))
+    dividers = sorted(random.sample(range(1, num_soldiers + num_fields), num_fields - 1))
     return [a - b - 1 for a, b in zip(dividers + [num_soldiers + num_fields], [0] + dividers)]
 
 

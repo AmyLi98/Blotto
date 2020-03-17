@@ -18,7 +18,7 @@ def Copier(weights, soldiers):
     # We can't copy the opponent on the first move, so make our own strat.
     castles = len(weights)
     firstMove = [0]*castles # The list [0, 0, ..., 0]
-    for i in xrange(soldiers):
+    for i in range(soldiers):
         # add a soldier to a random castle
         randomCastle = randint(0, castles-1)
         firstMove[randomCastle] += 1

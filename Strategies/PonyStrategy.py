@@ -97,7 +97,7 @@ def scoreDistribution(v,w):
     if len(v) == 0: return {0:1}
     # Try pairing v[0] with everything from w.
     total = {}
-    for v0pair in xrange(len(w)):
+    for v0pair in range(len(w)):
         result0 = cmp(v[0], w[v0pair])
         remainingv = v[1:]
         remainingw = w[:v0pair]+w[v0pair+1:]
@@ -133,8 +133,8 @@ def exploit(army):
     army = list(army)
     army[indices[0]] = 0
     army[indices[1]] = 0
-    remain = [(free+i)/8 for i in xrange(8)]
-    for i in xrange(8):
+    remain = [(free+i)/8 for i in range(8)]
+    for i in range(8):
         army[i] += remain[i]
     shuffle(army)
     return tuple(army)
@@ -203,7 +203,7 @@ def SupportVectorPony():
                 score = Escore(herds[p], tuple(opponentsLastMove))
             else:
                 result = [cmp(herds[p][i],opponentsLastMove[i])
-                          for i in xrange(8)]
+                          for i in range(8)]
                 result = cmp(sum(result),0)
                 score = 40320*result
             scores[p] += score

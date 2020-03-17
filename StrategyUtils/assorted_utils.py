@@ -9,7 +9,7 @@ def counter_allocation(allocation):
     result = [0.0 for _ in allocation]
     sorted_allocation = sorted(enumerate(allocation), key=lambda x: x[1], reverse=True)
 
-    for i in xrange(1, len(sorted_allocation)):
+    for i in range(1, len(sorted_allocation)):
         result[sorted_allocation[i][0]] = sorted_allocation[i][1] + 1
 
     result[sorted_allocation[0][0]] = 100 - int(sum(result))

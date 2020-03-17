@@ -1,5 +1,12 @@
 __author__ = 'camzzz'
 
+import sys
+sys.path.append("D:\\APT_Game\\Blotto")
+sys.path.append("D:\\APT_Game\\Blotto\\Strategies")
+sys.path.append("D:\\APT_Game\\Blotto\\StrategyUtils")
+sys.path.append("D:\\APT_Game\\Blotto\\scripts")
+
+
 from GameManager import GameManager
 from Strategies import StaticStrategy, CounterStrategy
 

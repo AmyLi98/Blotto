@@ -22,7 +22,7 @@ def quickTest(player1, player2, weights, soldiers, iterations):
     move1 = P1.next()
     move2 = P2.next()
     
-    for i in xrange(iterations):
+    for i in range(iterations):
         result = score(move1, move2, weights, soldiers)
         totalscore += result
         if result > 0: numberOfWins += 1
@@ -37,7 +37,7 @@ def score(move1, move2, weights, soldiers):
     check(move2, weights, soldiers)
 
     total = 0
-    for i in xrange(len(weights)):
+    for i in range(len(weights)):
         if move1[i] > move2[i]: total += weights[i]
         if move1[i] < move2[i]: total -= weights[i]
 

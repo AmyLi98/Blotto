@@ -1,15 +1,11 @@
 __author__ = 'camzzz'
 
-import os
+import sys
+sys.path.append("D:\\APT_Game\\Blotto")
+sys.path.append("D:\\APT_Game\\Blotto\\Strategies")
+sys.path.append("D:\\APT_Game\\Blotto\\StrategyUtils")
+sys.path.append("D:\\APT_Game\\Blotto\\scripts")
 
-python_path = ""
-
-if os.getcwd().endswith("scripts"):
-    python_path = os.path.abspath(os.path.join(os.getcwd(), ".."))
-else:
-    python_path = os.path.abspath(os.getcwd())
-
-os.sys.path.append(python_path)
 
 from Strategies import StaticStrategy
 from StrategyUtils import StrategyRanker
@@ -17,9 +13,9 @@ from StrategyUtils import StrategyRanker
 
 def main():
     static_strat_list = []
-    for i in xrange(0, 101, 1):
-        for j in xrange(0, 101-i, 1):
-            for k in xrange(j, 101-i-j):
+    for i in range(0, 101, 1):
+        for j in range(0, 101-i, 1):
+            for k in range(j, 101-i-j):
                 static_strat_list.append([i, j, k])
 
     strategies = []

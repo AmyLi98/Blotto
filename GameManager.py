@@ -37,7 +37,7 @@ class GameManager(object):
         self.strategy_B.initialise(num_fields=self.num_fields,
                                    num_runs=self.num_runs)
 
-        for i in xrange(self.num_runs):
+        for i in range(self.num_runs):
             self.iteration(i)
 
         return self.results
@@ -80,7 +80,7 @@ class GameManager(object):
             return 0
 
         score = 0
-        for i in xrange(self.num_fields):
+        for i in range(self.num_fields):
             score += sign(soldiers_A[i] - soldiers_B[i])
 
         if self.total_score:

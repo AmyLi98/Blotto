@@ -20,8 +20,8 @@ class StrategyRanker(object):
         bar = progressbar.ProgressBar(maxval=len(self.strategies)*(len(self.strategies) + 1) / 2.0,
                                       widgets=[progressbar.Bar('=', '[', ']'), progressbar.Percentage()])
         k = 0
-        for i in xrange(len(self.strategies)):
-            for j in xrange(i+1, len(self.strategies)):
+        for i in range(len(self.strategies)):
+            for j in range(i+1, len(self.strategies)):
                 gm = GameManager(self.strategies[i], self.strategies[j], self.num_fields, self.num_runs, self.total_score)
                 gm.run()
                 if gm.check_strategy_A_win():
