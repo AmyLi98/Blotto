@@ -1,5 +1,16 @@
 __author__ = 'camzzz'
 
+import os
+
+python_path = ""
+
+if os.getcwd().endswith("scripts"):
+    python_path = os.path.abspath(os.path.join(os.getcwd(), ".."))
+else:
+    python_path = os.path.abspath(os.getcwd())
+
+os.sys.path.append(python_path)
+
 from Strategies import StaticStrategy
 from StrategyUtils import StrategyRanker
 
@@ -19,7 +30,7 @@ def main():
     sr.run()
 
     top_strats = sr.get_top_strategies(1)
-    print top_strats
+    print(top_strats)
 
 
 if __name__ == "__main__":

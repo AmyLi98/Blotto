@@ -103,17 +103,17 @@ class GameManager(object):
     def declare_winner(self):
         s = sum(self.results)
         if s > 0:
-            print "%s is the winner by %s points!" % (self.strategy_A.name, s)
-            print "Max possible points: %s" % self.get_max_score()
-            print "Percentage of highest score: %.2f%%" % (100 * s / self.get_max_score())
+            print("%s is the winner by %s points!" % (self.strategy_A.name, s))
+            print("Max possible points: %s" % self.get_max_score())
+            print("Percentage of highest score: %.2f%%" % (100 * s / self.get_max_score()))
 
         elif s < 0:
-            print "%s is the winner by %s points!" % (self.strategy_B.name, -s)
-            print "Max possible points: %s" % self.get_max_score()
-            print "Percentage of highest score: %.2f%%" % (100 * -s / self.get_max_score())
+            print("%s is the winner by %s points!" % (self.strategy_B.name, -s))
+            print("Max possible points: %s" % self.get_max_score())
+            print("Percentage of highest score: %.2f%%" % (100 * -s / self.get_max_score()))
 
         else:
-            print "The game was a tie!"
+            print("The game was a tie!")
         plt.show()
 
     def get_score(self):

@@ -217,6 +217,6 @@ def SupportVectorPony():
         usage[bestPony] += 1
         iterations += 1
         if iterations == 900:
-            print usage
-            print scores
+            print(usage)
+            print(scores)
         myMove = herds[bestPony]

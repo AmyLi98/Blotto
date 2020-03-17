@@ -22,7 +22,7 @@ People might mess around with other setups afterwards. Suggestions of weighted f
 
 Uses:
 
- - python2.7
+ - python 3.7
  
  Optional:
  - matplotlib (sudo apt-get install python-matplotlib on linux or equivalent elsewhere)

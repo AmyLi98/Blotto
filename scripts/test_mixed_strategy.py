@@ -1,5 +1,16 @@
 __author__ = 'camzzz'
 
+import os
+
+python_path = ""
+
+if os.getcwd().endswith("scripts"):
+    python_path = os.path.abspath(os.path.join(os.getcwd(), ".."))
+else:
+    python_path = os.path.abspath(os.getcwd())
+
+os.sys.path.append(python_path)
+
 from GameManager import GameManager
 from Strategies import StaticStrategy, RandomStrategy, MixedStrategy
 
